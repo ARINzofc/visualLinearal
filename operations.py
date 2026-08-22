@@ -11,3 +11,9 @@ def vector_mag(v):
 def vector_dot(c,b):
     c=a.dot(c,b)
     return c
+def matrix_tranform(t,y):
+    c=a.linalg.matmul(t,y)
+    return c
+def square(r,p):
+    tranformed=(r@p.T).T
+    return tranformed
