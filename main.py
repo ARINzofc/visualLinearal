@@ -19,12 +19,27 @@ if(Enter==1):
     n=a.array([A,A2])
     p=a.array([B,B2])
     result=vector_addition(n,p)
-    print("Addition",vector_addition(n,p))
-    print("subtractions",vector_subtract(n,p))
-    print("multiple",vector_multiple(n,p))
-    print("Magnitude",vector_mag(n))
-    print("Dot product",vector_dot(n,p))
-    vector_draw(n,p,result)
+    print("1. Addition")
+    print("2. subtractions")
+    print("3. multiple")
+    print("4. Magnitude")
+    print("5. Dot product")
+    Enter=int(input("Enter the choice:"))
+    if(Enter==1):
+        print("Addition",vector_addition(n,p))
+    elif(Enter==2):
+        print("Subtraction",vector_subtract(n,p))
+    elif(Enter==3):
+        print("Multiple",vector_multiple(n,p))
+    elif(Enter==4):
+        print("Magnitude",vector_mag(n))
+    elif(Enter==5):
+        print("Dot product",vector_dot(n,p))   
+    Enter2=str(input("do you want visualize: "))
+    if(Enter2.lower()=="yes"):                   
+        vector_draw(n,p,result)
+    else:
+        exit    
 elif(Enter==2):
     r1a=int(input("Enter matrix row 1: "))
     r2a=int(input("Enter matrix row 1: "))
@@ -40,10 +55,3 @@ elif(Enter==2):
     matrix_draw(v,matmul)
 else:
     exit
-    
-
-
-
-
-
-
