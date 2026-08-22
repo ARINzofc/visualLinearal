@@ -1,7 +1,12 @@
 import numpy as a
 from operations import vector_addition,vector_subtract,vector_multiple,vector_mag,vector_dot,matrix_tranform,square
-from visualizer import vector_draw,matrix_draw,draw_vector
-print("Linear Algebra Visualizer")
+from visualizer import vector_draw,matrix_draw
+print("""
+╔══════════════════════════════════════╗
+║      NUMPY LINEAR ALGEBRA            ║
+║           VISUALIZER                 ║
+╚══════════════════════════════════════╝
+""")
 print("1. Vector Addition")
 print("2. Matrix Transformation")
 print("3. Exit")
@@ -36,11 +41,6 @@ elif(Enter==2):
 else:
     exit
     
-
-
-
-
-
 
 
 
