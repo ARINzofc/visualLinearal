@@ -25,25 +25,19 @@ def intro():
     A2 = get_number("Enter j component of A: ")
     B = get_number("Enter i component of B: ")
     B2 = get_number("Enter j component of B: ")
-
     n = a.array([A, A2])
     p = a.array([B, B2])
-
     return n, p
-
-
+    
 def introm():
     A = get_number("Enter row 1, column 1: ")
     A2 = get_number("Enter row 1, column 2: ")
     B = get_number("Enter row 2, column 1: ")
     B2 = get_number("Enter row 2, column 2: ")
-
     v1 = get_number("Enter the vector x: ")
     v2 = get_number("Enter the vector y: ")
-
     c = a.array([v1, v2])
     n = a.array([[A, A2], [B, B2]])
-
     return n, c
 
 
@@ -145,15 +139,12 @@ if Enter == 1:
 
     elif Enter3 == 8:
         n, p = intro()
-
         b = get_number("Coefficient of A: ")
         c = get_number("Coefficient of B: ")
-
         print(
             "Linear Combination:",
             linear_combination(n, p, b, c)
         )
-
     elif Enter3 == 9:
         n, p = intro()
         print(linear_independece(n, p))
