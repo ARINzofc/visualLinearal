@@ -17,3 +17,25 @@ def matrix_tranform(t,y):
 def square(r,p):
     tranformed=(r@p.T).T
     return tranformed
+def unit_vector(v):
+    magnitude=a.linalg.norm(v)
+    if a.close(magnitude,0):
+        print("Error")
+        return None
+    else:    
+        return v/magnitude
+def projection(v,p):
+    magnitude=a.linalg.norm(p)
+    if a.isclose(magnitude,0):
+        print("Error: Cannot project onto a zero vector")
+        return None
+    else:
+        projection=(a.dot(v,p)/a.dot(p,p))*p
+    return projection
+def linear_combination(v,p,alpha,beta):
+    return alpha*v+beta*p
+def linear_independece(v,k):
+    if(a.linalg.det(v,k)==0):
+        return "linearly dependent"
+    else:
+        return "linearly independent"
